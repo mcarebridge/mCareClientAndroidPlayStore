@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        mcareconfig {
+            keyAlias 'djKey'
+            keyPassword '1q2w3e4r'
+            storeFile file('C:/devarea/mCareClientAndroid/key/mcarebridge_1.jks')
+            storePassword '1q2w3e4r'
+        }
+    }
+    compileSdkVersion 22
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId 'com.phr.ade'
+        minSdkVersion 22
+        targetSdkVersion 22
+        versionCode 3
+        versionName "3"
+        signingConfig signingConfigs.mcareconfig
+    }
+    /**
+     buildTypes {release {runProguard false
+     proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'}}productFlavors {}*/
+    productFlavors {
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.mcareconfig
+            debuggable true
+        }
+        release {
+            signingConfig signingConfigs.mcareconfig
+            debuggable false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_6
+        targetCompatibility JavaVersion.VERSION_1_6
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+}

@@ -1,0 +1,85 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="CaredPerson">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:long" name="ID"/>
+                <xs:element type="xs:string" name="name"/>
+                <xs:element name="RxPrescribed">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:long" name="ID"/>
+                            <xs:element type="xs:string" name="RxTag"/>
+                            <xs:element name="Physician">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:long" name="ID"/>
+                                        <xs:element type="xs:string" name="Name"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="CareGiver">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:long" name="ID"/>
+                                        <xs:element type="xs:string" name="Name"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="RxLines" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:long" name="ID"/>
+                                        <xs:element type="xs:string" name="Rx"/>
+                                        <xs:element type="xs:string" name="Dosage"/>
+                                        <xs:element type="xs:string" name="Route"/>
+                                        <xs:element type="xs:string" name="ScheduleByHours"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="PreExistingCondition">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:long" name="ID"/>
+                            <xs:element name="Condition" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="Name"/>
+                                        <xs:element name="Symptoms" maxOccurs="unbounded" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:long" name="ID"/>
+                                                    <xs:element type="xs:string" name="Tag"/>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="EmergencyResponse">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Provider">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:long" name="ID"/>
+                                        <xs:element type="xs:string" name="Name"/>
+                                        <xs:element type="xs:string" name="Contact"/>
+                                        <xs:element type="xs:string" name="Cell"/>
+                                        <xs:element type="xs:string" name="Fixed"/>
+                                        <xs:element type="xs:string" name="ContactPerson"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

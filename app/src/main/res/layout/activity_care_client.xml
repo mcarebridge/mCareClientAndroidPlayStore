@@ -1,0 +1,425 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CareClientLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    tools:context=".CareClientActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cared Person -1"
+        android:id="@+id/rxfor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:typeface="normal"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@+id/btsymp3"
+        android:textColor="#ff0c0d9c"
+        android:layout_alignBottom="@+id/rxtaken" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Taken"
+        android:id="@+id/rxtaken"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/rxskip"
+        android:singleLine="false"
+        android:typeface="sans"
+        android:background="#ffbbbbbb"
+        android:layout_margin="2dp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:id="@+id/rxskip"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:background="#ffbbbbbb"
+        android:layout_margin="2dp"
+        android:singleLine="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rx Details"
+        android:id="@+id/rxlineitem"
+        android:layout_above="@+id/dose1"
+        android:typeface="normal"
+        android:background="#ff7eb9d0"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:minWidth="200dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Dosage"
+        android:id="@+id/rxdosage"
+        android:layout_toLeftOf="@+id/rxtime"
+        android:typeface="normal"
+        android:background="#7eb9d0"
+        android:layout_toRightOf="@+id/rxlineitem"
+        android:singleLine="true"
+        android:layout_alignTop="@+id/rxtime"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time"
+        android:id="@+id/rxtime"
+        android:layout_below="@+id/rxtaken"
+        android:layout_alignRight="@+id/rxskip"
+        android:typeface="normal"
+        android:background="#7eb9d0"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/rxtaken" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-"
+        android:id="@+id/rx1"
+        android:layout_below="@+id/rxlineitem"
+        android:typeface="normal"
+        android:layout_toLeftOf="@+id/dose1"
+        android:background="#ffdeefff"
+        android:singleLine="false"
+        android:layout_toRightOf="@+id/rxcheck0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-"
+        android:id="@+id/dose1"
+        android:layout_below="@+id/rxdosage"
+        android:layout_toLeftOf="@+id/time1"
+        android:typeface="normal"
+        android:layout_toRightOf="@+id/rxlineitem"
+        android:background="#ffdeefff"
+        android:singleLine="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-"
+        android:id="@+id/time1"
+        android:layout_alignTop="@+id/dose1"
+        android:layout_alignRight="@+id/rxtime"
+        android:layout_toRightOf="@+id/rxdosage"
+        android:typeface="normal"
+        android:background="#ffdeefff"
+        android:layout_alignBottom="@+id/rx1"
+        android:singleLine="false" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fever"
+        android:id="@+id/btsymp1"
+        android:background="#ffbbbbbb"
+        android:layout_above="@+id/btsymp4"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:layout_alignRight="@+id/btsymp4"
+        android:layout_marginRight="1dp"
+        android:shadowColor="#00000000"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diziness"
+        android:id="@+id/btsymp2"
+        android:background="#ffbbbbbb"
+        android:layout_toRightOf="@+id/btsymp4"
+        android:layout_marginLeft="1dp"
+        android:layout_below="@+id/dose3"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:minWidth="100dp"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:layout_above="@+id/btsymp4"
+        android:layout_marginBottom="1dp"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body Ache"
+        android:id="@+id/btsymp4"
+        android:background="#ffbbbbbb"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:minWidth="100dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cramps"
+        android:id="@+id/btsymp5"
+        android:layout_alignBottom="@+id/btsymp4"
+        android:layout_toRightOf="@+id/btsymp4"
+        android:background="#ffbbbbbb"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:minWidth="100dp"
+        android:layout_alignTop="@+id/btsymp4"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nausea"
+        android:id="@+id/btsymp6"
+        android:background="#ffbbbbbb"
+        android:layout_toLeftOf="@+id/btemergency"
+        android:minWidth="100dp"
+        android:layout_marginRight="1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginLeft="1dp"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:layout_alignTop="@+id/btsymp4"
+        android:layout_alignBottom="@+id/btsymp8"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Emergency"
+        android:id="@+id/btemergency"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignTop="@+id/btsymp1"
+        android:textColor="#ffffffff"
+        android:background="#ffff010d"
+        android:layout_marginTop="2dp"
+        android:clickable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/rx2"
+        android:background="#ffebebeb"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_toLeftOf="@+id/dose2"
+        android:layout_below="@+id/rx1"
+        android:layout_toRightOf="@+id/rxcheck0"
+        android:layout_alignBottom="@+id/rxcheck1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/dose2"
+        android:layout_alignBottom="@+id/rx2"
+        android:layout_toRightOf="@+id/rx1"
+        android:background="#FFEBEBEB"
+        android:layout_below="@+id/time1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_toLeftOf="@+id/textView7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView7"
+        android:background="#fff89bff"
+        android:layout_alignTop="@+id/dose2"
+        android:layout_alignLeft="@+id/rxtaken"
+        android:layout_alignBottom="@+id/dose1"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/time2"
+        android:layout_below="@+id/time1"
+        android:layout_alignLeft="@+id/textView7"
+        android:background="#FFEBEBEB"
+        android:layout_alignRight="@+id/btemergency"
+        android:layout_alignBottom="@+id/dose2"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/rx3"
+        android:background="#ffdeefff"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_above="@+id/btsymp1"
+        android:layout_alignRight="@+id/rx1"
+        android:layout_alignLeft="@+id/rx2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/dose3"
+        android:layout_alignTop="@+id/rx3"
+        android:layout_alignLeft="@+id/dose2"
+        android:layout_alignRight="@+id/dose2"
+        android:background="#ffdeefff"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignBottom="@+id/rx3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/time3"
+        android:layout_alignTop="@+id/dose3"
+        android:layout_alignLeft="@+id/time2"
+        android:layout_alignRight="@+id/btemergency"
+        android:background="#ffdeefff"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignBottom="@+id/dose3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giddy"
+        android:id="@+id/btsymp8"
+        android:minWidth="100dp"
+        android:background="#ffbbbbbb"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:layout_toLeftOf="@+id/btsymp6"
+        android:layout_toRightOf="@+id/btsymp2"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignTop="@+id/btsymp5"
+        android:layout_alignBottom="@+id/btsymp5"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sweating"
+        android:id="@+id/btsymp7"
+        android:minWidth="100dp"
+        android:background="#ffbbbbbb"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:layout_toLeftOf="@+id/btemergency"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignBottom="@+id/btsymp3"
+        android:layout_alignTop="@+id/btsymp2"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palipitation"
+        android:id="@+id/btsymp3"
+        android:layout_alignTop="@+id/btsymp2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:background="#ffbbbbbb"
+        android:layout_alignLeft="@+id/btsymp8"
+        android:layout_alignRight="@+id/btsymp8"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignBottom="@+id/btsymp2"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rxcheck0"
+        android:checked="false"
+        android:layout_below="@+id/rxlineitem"
+        android:layout_alignLeft="@+id/rxfor"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignRight="@+id/rxcheck1"
+        android:clickable="true"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rxcheck1"
+        android:checked="false"
+        android:layout_below="@+id/rx1"
+        android:layout_toRightOf="@+id/imageView7"
+        android:layout_above="@+id/rx3"
+        android:layout_alignRight="@+id/rxcheck2"
+        android:clickable="true"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rxcheck2"
+        android:layout_below="@+id/rxcheck1"
+        android:layout_alignLeft="@+id/btsymp1"
+        android:checked="false"
+        android:layout_above="@+id/btemergency"
+        android:clickable="true"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Cared Person - 2"
+        android:id="@+id/rxfor1"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/btsymp5"
+        android:layout_toLeftOf="@+id/rxtaken"
+        android:layout_alignBottom="@+id/rxfor"
+        android:textColor="#ffb2b2b2" />
+
+
+</RelativeLayout>

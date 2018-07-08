@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CaredPerson>
+    <ID>7040001</ID>
+    <Name>Hiralal Srivastava</Name>
+    <RxPrescribed>
+        <ID>4050001</ID>
+        <RxTag>Heart murmur</RxTag>
+        <Physician>
+            <ID>4090001</ID>
+            <Name>Kushal Sarda</Name>
+        </Physician>
+        <CareGiver>
+            <ID>1040101</ID>
+            <Name>Kapil Srivastava</Name>
+        </CareGiver>
+    </RxPrescribed>
+    <RxPrescribed>
+        <ID>5050051</ID>
+        <RxTag>Gen Weakness</RxTag>
+        <Physician>
+            <ID>4090001</ID>
+            <Name>Kushal Sarda</Name>
+        </Physician>
+        <CareGiver>
+            <ID>4040051</ID>
+            <Name>Dheeraj Srivastava</Name>
+        </CareGiver>
+    </RxPrescribed>
+    <RxPrescribed>
+        <ID>6110001</ID>
+        <RxTag>Parkinson</RxTag>
+        <Physician>
+            <ID>3070151</ID>
+            <Name>Kirti Parankusam</Name>
+        </Physician>
+        <CareGiver>
+            <ID>4040051</ID>
+            <Name>Dheeraj Srivastava</Name>
+        </CareGiver>
+        <RxLines>
+            <ID>2160001</ID>
+            <Rx>Combiflam</Rx>
+            <Dosage>100</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160002</ID>
+            <Rx>ECOSPIRIN</Rx>
+            <Dosage>150</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160003</ID>
+            <Rx>PANTOP</Rx>
+            <Dosage>40</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160005</ID>
+            <Rx>VIT B COMPLEX B1</Rx>
+            <Dosage>5</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160006</ID>
+            <Rx>GLUOCOSAMINE</Rx>
+            <Dosage>1</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160007</ID>
+            <Rx>SYNDOPA</Rx>
+            <Dosage>250</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8-21</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160008</ID>
+            <Rx>RAMIPRIL</Rx>
+            <Dosage>10</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160009</ID>
+            <Rx>FOLIC ACID</Rx>
+            <Dosage>5</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160010</ID>
+            <Rx>ROPARK XI</Rx>
+            <Dosage>4</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>2160011</ID>
+            <Rx>Test Drug</Rx>
+            <Dosage>100</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>9000001</ID>
+            <Rx>Test Drug1</Rx>
+            <Dosage>100</Dosage>
+            <Route>PO</Route>
+            <ScheduleByHours>8-16-21</ScheduleByHours>
+        </RxLines>
+    </RxPrescribed>
+    <PreExistingCondition>
+        <ID>999999</ID>
+        <Condition>
+            <Name>Default</Name>
+            <Symptoms>
+                <ID>1003</ID>
+                <Tag>Fatigue</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>1004</ID>
+                <Tag>Headache</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>1005</ID>
+                <Tag>Black Out</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>1006</ID>
+                <Tag>Dizziness</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>1007</ID>
+                <Tag>Sweating</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>1008</ID>
+                <Tag>Fever</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>1009</ID>
+                <Tag>Vomiting</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>1010</ID>
+                <Tag>Blurred Vision</Tag>
+            </Symptoms>
+        </Condition>
+    </PreExistingCondition>
+    <EmergencyResponse>
+        <Provider>
+            <ID>0</ID>
+            <Name>-</Name>
+            <Contact>-</Contact>
+            <Cell>-</Cell>
+            <Fixed>-</Fixed>
+            <!-- to be taken out -->
+            <ContactPerson>-</ContactPerson>
+        </Provider>
+    </EmergencyResponse>
+</CaredPerson>

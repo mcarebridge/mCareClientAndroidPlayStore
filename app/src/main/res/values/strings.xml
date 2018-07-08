@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sevha">sevhā</string>
+    <string name="app_name">sevhā</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="logo_content_desc">sevhā</string>
+    <string name="timestamptext">20-Sept-2014</string>
+    <string name="notification">Notification</string>
+    <string name="notification_hint">User Notification</string>
+    <string name="reminder">Reminder Name</string>
+    <string name="done">Done</string>
+    <string name="copyright">Copyright 2018 sevhā</string>
+
+    <!-- Common messages -->
+    <string name="msgMainWelcome">Welcome to sevhā.</string>
+    <string name="msgNotReg">You are not registered with sevhā. Please contact your Care Giver.</string>
+    <string name="msgWelcome">Welcome to sevhā. Please click Synch to Proceed.</string>
+    <string name="msgTimeOutNoInternet">Connection Timeout. Please check internet connection.</string>
+    <string name="msgSrvNotFndNoInternet">Unable to resolve server. Please check internet connection.</string>
+    <string name="msgDataSynchErr">Error in Data Synch. Please email to care@sevha.com.</string>
+    <string name="msgNoEmgContact">No Emergency Contact Found. Please call regional emergency numbers.</string>
+    <string name="msgRxSynchUp">Please wait for Rx Synch Up.</string>
+
+
+    <!-- Button -->
+    <string name="btnTaken">TAKEN</string>
+    <string name="btnClose">CLOSE</string>
+    <string name="btnNext">NEXT</string>
+    <string name="btnNoRx">No Rx</string>
+    <string name="btnRetry">Retry</string>
+    <string name="btnLoadRx">Load Rx</string>
+    <string name="btnSynch">Synch</string>
+    <string name="btnSynchErr">Synch Err</string>
+    <string name="labelEmergency">Dial EMERGENCY</string>
+
+
+    <string name="rxscdledMsg">You have scheduled medication. Click on &apos;Load Rx&apos; to Proceed</string>
+    <string name="norxscdledMsg">Relax! No scheduled medication.</string>
+
+    <!-- Rx Box -->
+    <string name="rxreminder">Rx reminder</string>
+    <string name="rxhint">Do not forget your medication</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_care_layout">CareLayout</string>
+
+    <string name="btn_AddTitle">Temp</string>
+</resources>

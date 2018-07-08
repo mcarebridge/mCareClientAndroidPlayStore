@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CaredPerson>
+    <ID>10</ID>
+    <Name>H L Srvastava</Name>
+    <RxPrescribed>
+        <ID>100</ID>
+        <RxTag>Parkinson</RxTag>
+        <Physician>
+            <ID>101</ID>
+            <Name>Col Batra</Name>
+        </Physician>
+        <CareGiver>
+            <ID>200</ID>
+            <Name>Dheera Srivastava</Name>
+        </CareGiver>
+        <RxLines>
+            <ID>1000</ID>
+            <Rx>Domophine</Rx>
+            <Dosage>1-1-1</Dosage>
+            <Route>Oral</Route>
+            <ScheduleByHours>9-15-22</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>10001</ID>
+            <Rx>Romophine</Rx>
+            <Dosage>1-0-1</Dosage>
+            <Route>Oral</Route>
+            <ScheduleByHours>8-15-22</ScheduleByHours>
+        </RxLines>
+    </RxPrescribed>
+    <RxPrescribed>
+        <ID>105</ID>
+        <RxTag>BP</RxTag>
+        <Physician>
+            <ID>105</ID>
+            <Name>Col Batra</Name>
+        </Physician>
+        <CareGiver>
+            <ID>202</ID>
+            <Name>Dheeraj Srivastava</Name>
+        </CareGiver>
+        <RxLines>
+            <ID>1004</ID>
+            <Rx>bp-Ampobine</Rx>
+            <Dosage>1-1-1</Dosage>
+            <Route>Oral</Route>
+            <ScheduleByHours>9-18-23</ScheduleByHours>
+        </RxLines>
+        <RxLines>
+            <ID>10001</ID>
+            <Rx>Romophine</Rx>
+            <Dosage>1-0-1</Dosage>
+            <Route>Oral</Route>
+            <ScheduleByHours>8-15-22</ScheduleByHours>
+        </RxLines>
+    </RxPrescribed>
+    <PreExistingCondition>
+        <ID>500</ID>
+        <Condition>
+            <Name>Diabetes</Name>
+            <Symptoms>
+                <ID>101</ID>
+                <Tag>Thirst</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>102</ID>
+                <Tag>Headache</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>103</ID>
+                <Tag>Diziness</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>104</ID>
+                <Tag>Blacout</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>105</ID>
+                <Tag>Feverish</Tag>
+            </Symptoms>
+            <Symptoms>
+                <ID>106</ID>
+                <Tag>Chills</Tag>
+            </Symptoms>
+        </Condition>
+    </PreExistingCondition>
+    <EmergencyResponse>
+        <Provider>
+            <ID>2000</ID>
+            <Name>Comman Hosp</Name>
+            <Contact>Col. Batra</Contact>
+            <Cell>435345353</Cell>
+            <Fixed>4654645656456</Fixed>
+            <ContactPerson>Maj Patil</ContactPerson>
+        </Provider>
+    </EmergencyResponse>
+</CaredPerson>;

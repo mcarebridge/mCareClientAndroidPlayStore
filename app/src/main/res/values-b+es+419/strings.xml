@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sevha">sevhā</string>
+    <string name="app_name">sevhā</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="logo_content_desc">sevhā</string>
+    <string name="timestamptext">20-Sept-2014</string>
+    <string name="notification">Notification</string>
+    <string name="notification_hint">User Notification</string>
+    <string name="reminder">Reminder Name</string>
+    <string name="done">Done</string>
+    <string name="copyright">Copyright 2018 sevhā</string>
+
+    <!-- Common messages -->
+    <string name="msgMainWelcome">Bienvenido a sevhā</string>
+    <string name="msgNotReg">No estás registrado con sevhā. Por favor, póngase en contacto con su cuidador.</string>
+    <string name="msgWelcome">Bienvenido a sevhā. Por favor, haga clic en Sincronizar para continuar.</string>
+    <string name="msgTimeOutNoInternet">El tiempo de conexión expiro. Por favor, compruebe la conexión a internet.</string>
+    <string name="msgSrvNotFndNoInternet">No se puede resolver el servidor. Por favor, compruebe la conexión a internet.</string>
+    <string name="msgDataSynchErr">Error en sincronización de datos Por favor envíe un correo electrónico a care@sevha.com.</string>
+    <string name="msgNoEmgContact">No se encontró contacto de emergencia. Por favor llame a los números de emergencia regionales.</string>
+    <string name="msgRxSynchUp">Por favor, espere a Rx Synch Up.</string>
+
+
+    <!-- Button -->
+    <string name="btnTaken">TOMADO</string>
+    <string name="btnClose">CERRAR</string>
+    <string name="btnNext">SIGUIENTE</string>
+    <string name="btnNoRx">Sin medicación</string>
+    <string name="btnRetry">REVER</string>
+    <string name="btnLoadRx">Cargar Rx</string>
+    <string name="btnSynch">sincronización</string>
+    <string name="btnSynchErr">Error de Sincronización</string>
+    <string name="labelEmergency">Marque EMERGENCIA</string>
+
+
+    <string name="rxscdledMsg">Usted ha programado la medicación. Haga clic en &apos;Load-Rx&apos; para continuar</string>
+    <string name="norxscdledMsg">¡Relajarse! Sin medicación programada.</string>
+
+    <!-- Rx Box -->
+    <string name="rxreminder">Rx reminder</string>
+    <string name="rxhint">Do not forget your medication</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_care_layout">CareLayout</string>
+
+    <string name="btn_AddTitle">Temp</string>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="sevha">sevhā</string>
+    <string name="app_name">sevhā</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="logo_content_desc">sevhā</string>
+    <string name="timestamptext">20-Sept-2014</string>
+    <string name="notification">Notification</string>
+    <string name="notification_hint">User Notification</string>
+    <string name="reminder">Reminder Name</string>
+    <string name="done">Done</string>
+    <string name="copyright">Copyright 2018 sevhā</string>
+
+    <!-- Common messages -->
+    <string name="msgMainWelcome">Bienvenue à sevhā</string>
+    <string name="msgNotReg">Vous n&apos;êtes pas enregistré avec sevhā. Veuillez contacter votre fournisseur de soins.</string>
+    <string name="msgWelcome">Bienvenue à sevhā. Cliquez sur Synchroniser pour continuer.</string>
+    <string name="msgTimeOutNoInternet">Délai de connection dépassé. S&apos;il vous plaît vérifier la connexion internet.</string>
+    <string name="msgSrvNotFndNoInternet">Impossible de résoudre le serveur. S&apos;il vous plaît vérifier la connexion internet.</string>
+    <string name="msgDataSynchErr">Impossible de résoudre le serveur. S&apos;il vous plaît vérifier la connexion internet.</string>
+    <string name="msgNoEmgContact">Aucun contact d&apos;urgence trouvé. Veuillez appeler les numéros d&apos;urgence régionaux.</string>
+    <string name="msgRxSynchUp">Veuillez attendre Rx Synch Up.</string>
+
+    <!-- Button -->
+    <string name="btnTaken">PRIS</string>
+    <string name="btnClose">FERMER</string>
+    <string name="btnNext">PROCHAIN</string>
+    <string name="btnNoRx">Pas de Rx</string>
+    <string name="btnRetry">Recommencez</string>
+    <string name="btnLoadRx">Load Rx</string>
+    <string name="btnSynch">Charger Rx</string>
+    <string name="btnSynchErr">Synch Err</string>
+    <string name="labelEmergency">Dial URGENCE</string>
+
+
+
+    <string name="rxscdledMsg">Vous avez prévu des médicaments. Cliquez sur &apos; Load Rx &apos; procéder</string>
+    <string name="norxscdledMsg">Se détendre! Aucun médicament prévu.</string>
+
+    <!-- Rx Box -->
+    <string name="rxreminder">Rx reminder</string>
+    <string name="rxhint">Do not forget your medication</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_care_layout">CareLayout</string>
+
+    <string name="btn_AddTitle">Temp</string>
+</resources>

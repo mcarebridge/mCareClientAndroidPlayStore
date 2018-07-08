@@ -1,0 +1,46 @@
+<CaredPerson>
+    <ID>10</ID>
+    <name>string</name>
+    <RxPrescribed>
+        <ID>10</ID>
+        <RxTag>string</RxTag>
+        <Physician>
+            <ID>10</ID>
+            <Name>string</Name>
+        </Physician>
+        <CareGiver>
+            <ID>10</ID>
+            <Name>string</Name>
+        </CareGiver>
+        <!--Zero or more repetitions:-->
+        <RxLines>
+            <ID>10</ID>
+            <Rx>string</Rx>
+            <Dosage>string</Dosage>
+            <Route>string</Route>
+            <ScheduleByHours>string</ScheduleByHours>
+        </RxLines>
+    </RxPrescribed>
+    <PreExistingCondition>
+        <ID>10</ID>
+        <!--Zero or more repetitions:-->
+        <Condition>
+            <Name>string</Name>
+            <!--Zero or more repetitions:-->
+            <Symptoms>
+                <ID>10</ID>
+                <Tag>string</Tag>
+            </Symptoms>
+        </Condition>
+    </PreExistingCondition>
+    <EmergencyResponse>
+        <Provider>
+            <ID>10</ID>
+            <Name>string</Name>
+            <Contact>string</Contact>
+            <Cell>string</Cell>
+            <Fixed>string</Fixed>
+            <ContactPerson>string</ContactPerson>
+        </Provider>
+    </EmergencyResponse>
+</CaredPerson>

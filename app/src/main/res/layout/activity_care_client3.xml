@@ -1,0 +1,464 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CareClientLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    tools:context="com.phr.ade.activity.CareClientActivity3">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Rx Details"
+        android:id="@+id/rxlineitem"
+        android:layout_above="@+id/dose1"
+        android:typeface="normal"
+        android:background="#ff7eb9d0"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:minWidth="200dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Dosage"
+        android:id="@+id/rxdosage"
+        android:layout_toLeftOf="@+id/rxtime"
+        android:typeface="normal"
+        android:background="#7eb9d0"
+        android:layout_toRightOf="@+id/rxlineitem"
+        android:singleLine="true"
+        android:layout_alignTop="@+id/rxtime"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Time"
+        android:id="@+id/rxtime"
+        android:layout_below="@+id/rxtaken"
+        android:typeface="normal"
+        android:background="#7eb9d0"
+        android:singleLine="true"
+        android:textSize="20dp"
+        android:layout_alignLeft="@+id/rxtaken"
+        android:autoText="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-"
+        android:id="@+id/dose1"
+        android:layout_below="@+id/rxdosage"
+        android:layout_toLeftOf="@+id/time1"
+        android:typeface="normal"
+        android:layout_toRightOf="@+id/rxlineitem"
+        android:background="#ffdeefff"
+        android:singleLine="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-"
+        android:id="@+id/time1"
+        android:layout_alignTop="@+id/dose1"
+        android:layout_toRightOf="@+id/rxdosage"
+        android:typeface="normal"
+        android:background="#ffdeefff"
+        android:layout_alignBottom="@+id/rx1"
+        android:singleLine="false"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView7" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fever"
+        android:id="@+id/btsymp1"
+        android:background="@drawable/sympactionbtn"
+        android:layout_above="@+id/btsymp4"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="1dp"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:visibility="visible"
+        android:layout_toLeftOf="@+id/btsymp2"
+        android:layout_toStartOf="@+id/btsymp2" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diziness"
+        android:id="@+id/btsymp2"
+        android:background="@drawable/sympactionbtn"
+        android:layout_toRightOf="@+id/btsymp4"
+        android:layout_marginLeft="1dp"
+        android:layout_below="@+id/dose3"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:minWidth="100dp"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:layout_above="@+id/btsymp4"
+        android:layout_marginBottom="1dp"
+        android:visibility="visible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body Ache"
+        android:id="@+id/btsymp4"
+        android:background="@drawable/sympactionbtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="1dp"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:visibility="visible" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cramps"
+        android:id="@+id/btsymp5"
+        android:layout_alignBottom="@+id/btsymp4"
+        android:layout_toRightOf="@+id/btsymp4"
+        android:background="@drawable/sympactionbtn"
+        android:layout_marginLeft="1dp"
+        android:layout_marginBottom="1dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignTop="@+id/btsymp4"
+        android:onClick="onClickSymptoms"
+        android:clickable="true"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/rx2"
+        android:background="#ffebebeb"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_below="@+id/rx1"
+        android:layout_toEndOf="@+id/rxcheck0"
+        android:layout_toRightOf="@+id/rxcheck0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/dose2"
+        android:layout_alignBottom="@+id/rx2"
+        android:layout_toRightOf="@+id/rx1"
+        android:background="#FFEBEBEB"
+        android:layout_below="@+id/time1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_toLeftOf="@+id/textView7" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/textView7"
+        android:background="#fff89bff"
+        android:layout_alignTop="@+id/dose2"
+        android:layout_alignLeft="@+id/rxtaken"
+        android:layout_alignBottom="@+id/dose1"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/time2"
+        android:layout_below="@+id/time1"
+        android:layout_alignLeft="@+id/textView7"
+        android:background="#FFEBEBEB"
+        android:layout_alignBottom="@+id/dose2"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/rx3"
+        android:background="#ffdeefff"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_above="@+id/btsymp1"
+        android:layout_alignRight="@+id/rx1"
+        android:layout_alignLeft="@+id/rx2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/dose3"
+        android:layout_alignTop="@+id/rx3"
+        android:layout_alignLeft="@+id/dose2"
+        android:layout_alignRight="@+id/dose2"
+        android:background="#ffdeefff"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignBottom="@+id/rx3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/time3"
+        android:layout_alignTop="@+id/dose3"
+        android:layout_alignLeft="@+id/time2"
+        android:background="#ffdeefff"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignBottom="@+id/dose3"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Palipitation"
+        android:id="@+id/btsymp3"
+        android:background="@drawable/sympactionbtn"
+
+        android:layout_alignTop="@+id/btsymp2"
+        android:layout_alignLeft="@+id/btsymp8"
+        android:layout_alignRight="@+id/btsymp8"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_alignBottom="@+id/btsymp2"
+        android:visibility="visible" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rxcheck0"
+        android:checked="false"
+        android:layout_below="@+id/rxlineitem"
+        android:layout_alignLeft="@+id/rxfor"
+        android:layout_alignBottom="@+id/textView7"
+        android:layout_alignRight="@+id/rxcheck1"
+        android:clickable="true"
+        android:visibility="visible"
+        android:buttonTint="@android:color/holo_blue_dark" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rxcheck1"
+        android:checked="false"
+        android:layout_below="@+id/rx1"
+        android:layout_toRightOf="@+id/imageView7"
+        android:layout_above="@+id/rx3"
+        android:layout_alignRight="@+id/rxcheck2"
+        android:clickable="true"
+        android:visibility="visible"
+        android:buttonTint="@android:color/holo_blue_dark" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rxcheck2"
+        android:layout_below="@+id/rxcheck1"
+        android:layout_alignLeft="@+id/btsymp1"
+        android:checked="false"
+        android:layout_above="@+id/btemergency"
+        android:clickable="true"
+        android:visibility="visible"
+        android:buttonTint="@android:color/holo_blue_dark" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giddy"
+        android:id="@+id/btsymp8"
+        android:background="@drawable/sympactionbtn"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:visibility="visible"
+        android:layout_alignBaseline="@+id/btsymp5"
+        android:layout_alignBottom="@+id/btsymp5"
+        android:layout_toRightOf="@+id/btsymp5"
+        android:layout_toEndOf="@+id/btsymp5" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sweating"
+        android:id="@+id/btsymp7"
+        android:background="@drawable/sympactionbtn"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:visibility="visible"
+        android:layout_alignBottom="@+id/btsymp3"
+        android:layout_toRightOf="@+id/btsymp8"
+        android:layout_toEndOf="@+id/btsymp8" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nausea"
+        android:id="@+id/btsymp6"
+        android:background="@drawable/sympactionbtn"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:clickable="true"
+        android:onClick="onClickSymptoms"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/btsymp8"
+        android:layout_toEndOf="@+id/btsymp8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/rxfor1"
+        android:textColor="#ffb2b2b2"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/rxtime"
+        android:layout_toStartOf="@+id/rxtime" />
+
+    <Button
+        android:id="@+id/rxtaken"
+        style="@android:style/Widget.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/takenactionbtndisabled"
+        android:clickable="false"
+        android:drawableTop="@drawable/ic_check_black_24dp"
+        android:paddingTop="5dp"
+        android:text="@string/btnTaken"
+        android:typeface="sans"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/rxskip"
+        android:layout_toStartOf="@+id/rxskip" />
+
+    <Button
+        android:id="@+id/rxskip"
+        style="@android:style/Widget.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rxtime"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/skipactionbtn"
+        android:clickable="true"
+        android:drawableTop="@drawable/ic_highlight_off_white_24dp"
+        android:paddingTop="5dp"
+        android:text="@string/btnClose"
+        android:typeface="sans"
+        android:layout_toLeftOf="@+id/nextRx"
+        android:layout_toStartOf="@+id/nextRx" />
+
+    <Button
+        android:id="@+id/nextRx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rxtime"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nextactionbtndisabled"
+        android:clickable="true"
+        android:drawableTop="@drawable/ic_skip_next_white_24dp"
+        android:longClickable="false"
+        android:onClick="readNext"
+        android:paddingTop="5dp"
+        android:text="@string/btnNext"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault" />
+
+    <Button
+        android:id="@+id/btemergency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/nextRx"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/nextRx"
+        android:layout_alignTop="@+id/btsymp3"
+        android:layout_toEndOf="@+id/rxskip"
+        android:background="@drawable/ic_ring_volume_black_24dp"
+        android:backgroundTint="@color/brick_red"
+        android:capitalize="words"
+        android:clickable="true"
+        android:cursorVisible="false"
+        android:elevation="0dp"
+        android:longClickable="true"
+        android:onClick="dialEmergency"
+        android:textColor="@color/brick_red" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="-"
+        android:id="@+id/rx1"
+        android:typeface="normal"
+        android:background="#ffdeefff"
+        android:singleLine="false"
+        android:layout_alignBaseline="@+id/dose1"
+        android:layout_alignBottom="@+id/dose1"
+        android:layout_toRightOf="@+id/rxcheck0"
+        android:layout_toLeftOf="@+id/rxdosage"
+        android:layout_toStartOf="@+id/rxdosage" />
+
+    <TextView
+        android:id="@+id/rxfor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rxlineitem"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/rxtime"
+        android:drawableLeft="@drawable/ic_perm_identity_black_24dp"
+        android:fontFamily="sans-serif"
+        android:paddingTop="5dp"
+        android:text="Cared Person -1"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ff0c0d9c"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/emergContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/time3"
+        android:layout_toLeftOf="@+id/btemergency"
+        android:layout_toRightOf="@+id/btsymp7"
+        android:layout_toStartOf="@+id/btemergency"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:editable="false"
+        android:fontFamily="sans-serif"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="25dp"
+        android:text="@string/labelEmergency"
+        android:textAlignment="center"
+        android:textColor="@color/brick_red"
+        android:textSize="16sp" />
+</RelativeLayout>
