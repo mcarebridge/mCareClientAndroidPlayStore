@@ -13,6 +13,7 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -65,6 +66,14 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
         boolean _serviceCall = _intent.getBooleanExtra("SERVICE_CALL", false);
         Log.d("CareClientActivity2A", "--- onCreate._serviceCall --" + _serviceCall);
         Log.d("CareClientActivity2A", "--- onCreate.alertSet --" + alarmSet);
+
+        //start - set baseline
+
+        TextView _textView = (TextView) findViewById(R.id.textView3);
+        _textView.setText(Html.fromHtml("Copyright 2018 <a href=\"http://www.sevha.com\">sevhā</a>"));
+        _textView.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
+
+        //end - set baseline
 
         /**
          if (!alarmSet) {
@@ -145,7 +154,10 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
 
             String _messageToDisplay = selectDisplayMessage(rxSynchStatus, caredPersonName, _rxSchdl, auth, _responseData);
 
-            _rxMsgWindow.setText(_messageToDisplay);
+            //_rxMsgWindow.setText(_messageToDisplay);
+            _rxMsgWindow.setText(Html.fromHtml(_messageToDisplay));
+            _rxMsgWindow.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
+
         } else
         {
 //            new LoginAsyncTask(this).execute();
@@ -263,8 +275,8 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
                 if (xmlData != null)
                 {
                     _caredPerson = CareXMLReader.bindXML(xmlData);
-                    Log.d("-- Displaying Emergency Contact Details -- ", _caredPerson.getEmergencyResponse().getProvider().getContactPerson());
-                    Log.d("-- Displaying Emergency Contact Details -- ", _caredPerson.getEmergencyResponse().getProvider().getCell());
+                    Log.d("-Disp Emrgy Cnt Dtls--", _caredPerson.getEmergencyResponse().getProvider().getContactPerson());
+                    Log.d("-Disp Emrgy Cnt Dtls--", _caredPerson.getEmergencyResponse().getProvider().getCell());
                     setCaredPerson(_caredPerson);
 
                 }
@@ -292,7 +304,7 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
             // auth.equals("AUTH-FAILED")
             else
             {
-                Log.d("selDisplayMsg:authStatus:", auth + "-");
+                Log.d("selDsplMsg:authStatus:", auth + "-");
                 _messageToDisplay = _context.getResources().getString(R.string.msgMainWelcome);
                 _synchButton.setClickable(true);
                 _closeButton.setClickable(true);
@@ -302,7 +314,9 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
                 _synchButton.setBackground(_d);
                 String _retry = _context.getResources().getString(R.string.btnRetry);
                 _synchButton.setText(_retry);
+
                 _messageToDisplay += '\t' + _context.getResources().getString(R.string.msgNotReg);
+                _messageToDisplay +=" Click on <a href='https://sevha.com/health/register?actionParam=NEWREG'>sevhā</a> to register.";
             }
         } else if (rxSynchStatus.equals("WELCOME"))
         {
@@ -342,7 +356,7 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
             _closeButton.setClickable(true);
         } else
         {
-            Log.d("Displaying rxSynchStatus values for last condition :  ----> ", rxSynchStatus);
+            Log.d("Dspl last status val: ", rxSynchStatus);
             _messageToDisplay = "Unexpected err: " + rxSynchStatus + " Please report to care@sevha.com.";
             setWifiIcon(CONNECTION_ERR);
             Drawable _d = _context.getResources().getDrawable(R.drawable.synchbtn);
@@ -483,7 +497,7 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
         protected void onPreExecute()
         {
 
-            Log.d("LoginAsyncTask.onPreExecute", "----");
+            Log.d("onPreExecute", "----");
 
             progressDialog = new ProgressDialog(CareClientActivity2A.this);
             progressDialog.setMessage("Please wait...");
@@ -494,7 +508,7 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
         protected Void doInBackground(Void... args)
         {
             // Parse response data
-            Log.d("LoginAsyncTask.doInBackground", "----");
+            Log.d("doInBackground", "----");
             String _responseData = "--- RESPONSE STRING FROM LoginAsyncTask.doInBackground --";
 
 //            try {
@@ -514,7 +528,7 @@ public class CareClientActivity2A extends Activity implements View.OnClickListen
         protected void onPostExecute(Void result)
         {
 
-            Log.d("LoginAsyncTask.onPostExecute", "----");
+            Log.d("onPostExecute", "----");
 
             new Thread()
             {
